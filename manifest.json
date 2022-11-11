@@ -1,0 +1,20 @@
+{
+
+    "manifest_version": 2,
+    "name": "RainbowTables",
+    "version": "0.0.1",
+  
+    "description": "Makes any table pretty with one click",
+  
+    "icons": {
+      "128": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*"],
+        "js": ["main.js"]
+      }
+    ]
+  
+  }
