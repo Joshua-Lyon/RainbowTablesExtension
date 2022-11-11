@@ -3,18 +3,23 @@
     "manifest_version": 2,
     "name": "RainbowTables",
     "version": "0.0.1",
-  
+    "action":{},
     "description": "Makes any table pretty with one click",
   
-    "icons": {
-      "128": "icons/border-48.png"
+    "browser_action": {
+        "default_icon": {
+          "64":"img/rainbow64.png"
+        }
     },
   
     "content_scripts": [
       {
-        "matches": ["*"],
+        "matches": ["<all_urls>"],
         "js": ["main.js"]
       }
-    ]
-  
-  }
+    ],
+    "background": {
+        "scripts":["background.js"]
+    },
+    "permissions":["activeTab"]
+}
