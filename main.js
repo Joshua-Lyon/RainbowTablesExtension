@@ -7,7 +7,7 @@
 
 let RainbowTable = () => {
     let rows = document.getElementsByTagName('tr');
-    let colorHue = 0;
+    let colorHue = Math.floor(Math.random() * 11) * 30;
     for (let row of rows){
         let color = `hsl(${colorHue},100%,72%)`;
         row.style.background = color;
